@@ -19,17 +19,12 @@ export default class ApiService {
     this.page = 1;
   }
 
-  fetchArticles() {
-    const url = `${BASE_URL}/everything?q=${this.searchQuery}&language=en&pageSize=5&page=${this.page}`;
 
-    return fetch(url, options)
-      .then(response => response.json())
-      .then(({ articles }) => {
-        this.incrementPage();
-        return articles;
-      });
-  }
-
+ async getPhotos () {
+  const { data } = await axios.get(`${BASE_URL}?key=${API_KEY}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${this.page}`);
+this.incrementPage();
+  return data;
+}
   incrementPage() {
     this.page += 1;
   }
