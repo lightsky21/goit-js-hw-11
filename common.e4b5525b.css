@@ -1,0 +1,2 @@
+*,:after,:before{box-sizing:border-box}img{display:block;width:100%;height:auto}button{cursor:pointer}p{margin:0}.search-form{display:flex;justify-content:center;padding:8px;margin-bottom:24px}.load-more.is-hidden{display:none}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-gap:20px;padding:0;list-style:none;max-width:calc(100vw - 80px);margin:0 auto 30px}.info{display:flex}.gallery img{display:block;width:100%;height:200px;object-fit:cover}
+/*# sourceMappingURL=/goit-js-hw-11/common.e4b5525b.css.map */
