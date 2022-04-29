@@ -37,18 +37,7 @@ e.preventDefault()
 
 function clearGallery() {
  galleryEl.innerHTML = '';
-}
-
-
-
-function show() {
-        LoadMoreBtn.classList.remove('is-hidden');
-    }
-
-function    hide() {
-        LoadMoreBtn.classList.add('is-hidden');
-}
-    
+}   
 
 
 function fetchPhotos() {
@@ -66,13 +55,21 @@ function fetchPhotos() {
     }
     show();
     
-  })
+  }).catch()
   
+}
+
+function show() {
+        LoadMoreBtn.classList.remove('is-hidden');
+    }
+
+function hide() {
+        LoadMoreBtn.classList.add('is-hidden');
 }
 
 function addMarkupGallery(data) {
     const markupGallery = data.hits.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads}) => `<div class="photo-card">
-  <a class="gallery__item" href="${largeImageURL}">
+    <a class="gallery-link" href="${largeImageURL}">
     <img src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
   <div class="info">
     <p class="info-item">
